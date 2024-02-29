@@ -1,5 +1,6 @@
 const readDatabase = require('../utils');
 
+// constant students
 module.exports = class StudentsController {
   static getAllStudents(request, response) {
     readDatabase(process.argv[2])
@@ -16,6 +17,7 @@ module.exports = class StudentsController {
       .catch((err) => { response.send(err.message); });
   }
 
+  // basic test
   static getAllStudentsByMajor(request, response) {
     if (!['SWE', 'CS'].includes(request.params.major)) response.status(500).send('Major parameter must be CS or SWE');
     readDatabase(process.argv[2])

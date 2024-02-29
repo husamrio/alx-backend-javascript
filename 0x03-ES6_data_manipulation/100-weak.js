@@ -1,4 +1,4 @@
-/* Pointer to map of endpoints & no of calls made. */
+/* Pointer to weak map of endpoints & no of calls made. */
 export const weakMap = new WeakMap();
 export function queryAPI(endpoint) {
   if (!weakMap.has(endpoint)) {

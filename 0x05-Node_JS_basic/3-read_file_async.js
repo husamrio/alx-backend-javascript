@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// Integration testing
 module.exports = function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {

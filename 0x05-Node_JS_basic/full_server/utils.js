@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// however, remember that your tests 
 module.exports = function readDatabase(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {
@@ -27,6 +28,7 @@ module.exports = function readDatabase(path) {
           : list[idxFn];
       });
       for (const key in fields) {
+        // You have to use assert
         if (Object.hasOwnProperty.call(fields, key)) {
           const number = fields[key];
           all[key] = {

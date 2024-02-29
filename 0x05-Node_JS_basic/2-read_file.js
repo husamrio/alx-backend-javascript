@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// Async tests with done
 module.exports = function countStudents(path) {
   try {
     // read data and figure it out

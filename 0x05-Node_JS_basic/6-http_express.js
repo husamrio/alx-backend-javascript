@@ -8,6 +8,7 @@ app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
 
+// Stubs are similar
 app.listen(port);
 
 module.exports = app;

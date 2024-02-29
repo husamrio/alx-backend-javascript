@@ -43,6 +43,7 @@ function countStudents(path) {
   });
 }
 
+// Deep equality & Post integration testing
 const hostname = '127.0.0.1';
 const port = 1245;
 
