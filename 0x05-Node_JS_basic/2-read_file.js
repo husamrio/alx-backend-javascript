@@ -11,7 +11,7 @@ module.exports = function countStudents(path) {
 
     const lines = data.split('\n').slice(1, -1);
     // should give the header of data
-    
+
     const header = data.split('\n').slice(0, 1)[0].split(',');
     // Get firstname and field index
     const idxFn = header.findIndex((ele) => ele === 'firstname');
