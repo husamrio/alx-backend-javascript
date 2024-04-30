@@ -1,19 +1,25 @@
 const fs = require('fs');
 
 // Integration testing
+
 module.exports = function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {
       if (err) return reject(Error('Cannot load the database'));
-      // taking only list without header and  split data 
+      // taking only list without header and  split data
+
       const lines = data.split('\n').slice(1, -1);
       // header of data is given
+
       const header = data.split('\n').slice(0, 1)[0].split(',');
       // find firstname and field index
+
       const idxFn = header.findIndex((ele) => ele === 'firstname');
       const idxFd = header.findIndex((ele) => ele === 'field');
-      // declarate two dictionaries for count each 
+      // declarate two dictionaries for count each
+
       // fields and store list of students
+
       const fields = {};
       const students = {};
 
