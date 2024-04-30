@@ -1,13 +1,17 @@
 const fs = require('fs');
 
 // Async tests with done
+
 module.exports = function countStudents(path) {
   try {
     // read data and figure it out
+
     const data = fs.readFileSync(path, { encoding: 'utf-8' });
     // split data and taking only list without header only
+
     const lines = data.split('\n').slice(1, -1);
     // should give the header of data
+    
     const header = data.split('\n').slice(0, 1)[0].split(',');
     // Get firstname and field index
     const idxFn = header.findIndex((ele) => ele === 'firstname');
@@ -17,6 +21,7 @@ module.exports = function countStudents(path) {
     const students = {};
 
     // list of students
+
     lines.forEach((line) => {
       const list = line.split(',');
       if (!fields[list[idxFd]]) fields[list[idxFd]] = 0;
