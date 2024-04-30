@@ -1,4 +1,4 @@
 const displayMessage = (d) => console.log(d);
 
-// Combining descriptions const message
+// Combine descriptions const message 123
 module.exports = displayMessage;
